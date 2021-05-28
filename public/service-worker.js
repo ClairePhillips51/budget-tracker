@@ -11,9 +11,9 @@ const FILES_TO_CACHE = [
   '/dist/assets/icons/icon_256x256.png',
   '/dist/assets/icons/icon_384x384.png',
   '/dist/assets/icons/icon_512x512.png',
-];
+//];
 
-const URLS_TO_CACHE = [
+//const URLS_TO_CACHE = [
   'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css',
   'https://cdn.jsdelivr.net/npm/chart.js@2.8.0'
 ];
@@ -26,15 +26,15 @@ self.addEventListener('install', (event) => {
     caches
       .open(PRECACHE)
       .then((cache) => cache.addAll(FILES_TO_CACHE))
-      .then(() => {
-        for(let url of URLS_TO_CACHE)
-        {
-          console.log("Cache"+url);
-          let request = new Request(url, { mode: 'no-cors' });
-          fetch(request).then(response => cache.put(request, response));
-        }
-        self.skipWaiting()
-      })
+      // .then(() => {
+      //   for(let url of URLS_TO_CACHE)
+      //   {
+      //     console.log("Cache"+url);
+      //     let request = new Request(url, { mode: 'no-cors' });
+      //     fetch(request).then(response => cache.put(request, response));
+      //   }
+      //   self.skipWaiting()
+      // })
   );
 });
 
