@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/coding-boot-camp/unit18hw#readme",
   "dependencies": {
+    "@babel/core": "^7.4.4",
     "@babel/preset-env": "^7.14.2",
     "babel-loader": "^8.2.2",
     "babel-preset-env": "^1.7.0",
